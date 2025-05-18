@@ -9,5 +9,8 @@
       "js": ["js/content.js"],
       "run_at": "document_start"
     }
+  ],
+  "host_permissions": [
+    "https://cdn.jsdelivr.net/*"
   ]
 }
