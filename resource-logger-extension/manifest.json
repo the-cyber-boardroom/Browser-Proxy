@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "Resource Logger",
+  "version": "0.1",
+  "description": "Logs resources loaded on docs.diniscruz.ai",
+  "content_scripts": [
+    {
+      "matches": ["https://docs.diniscruz.ai/*"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ]
+}
