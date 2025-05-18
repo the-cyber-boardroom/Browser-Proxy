@@ -1,6 +1,6 @@
 [tool.poetry]
 name        = "browser_proxy"
-version     = "v0.1.1"
+version     = "v0.1.2"
 description = "Browser-Proxy"
 authors     = ["Dinis Cruz <dinis.cruz@owasp.org>"]
 license     = "Apache 2.0"
