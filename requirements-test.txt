@@ -1,0 +1,5 @@
+# for testing
+pytest
+pytest-cov
+coveralls
+osbot-utils
