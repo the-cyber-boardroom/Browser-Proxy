@@ -1,3 +1,6 @@
 # Documentation
 
-This folder contains documentation for the **Chrome Extension Website Proxy** project. See [architecture.md](architecture.md) for an overview of the design.
+This folder contains documentation for the **Chrome Extension Website Proxy** project.
+
+- [architecture.md](architecture.md) – textual overview of the design
+- [diagrams.md](diagrams.md) – Mermaid diagrams illustrating the architecture
