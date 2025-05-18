@@ -6,7 +6,7 @@
   "content_scripts": [
     {
       "matches": ["https://docs.diniscruz.ai/*"],
-      "js": ["content.js"],
+      "js": ["js/content.js"],
       "run_at": "document_start"
     }
   ]
