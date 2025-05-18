@@ -33,5 +33,4 @@ This document summarizes the architecture described in the project voice memo. T
 - Start with one repository containing the JavaScript for the extension, Python logic for the extension (via Pyodide), and the Python backend.
 - Consider splitting the project into submodules later if needed.
 
-
 For visual diagrams, see [diagrams.md](diagrams.md).
