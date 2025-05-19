@@ -1,7 +1,7 @@
 module.exports = function (wallaby) {
   return {
     files: [
-      'js/content.js',
+      'js/**/content.js',
       'manifest.json'
     ],
     tests: [

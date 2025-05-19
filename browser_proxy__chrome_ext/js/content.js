@@ -1,16 +1,17 @@
-(async function() {
-  // Load Pyodide from CDN
-  const pyodide = await loadPyodide({indexURL: 'https://cdn.jsdelivr.net/pyodide/v0.23.4/full/'});
-
-  // Load Python helper module bundled with the extension
-  const response = await fetch(chrome.runtime.getURL('message.py'));
-  const pythonCode = await response.text();
-  await pyodide.runPythonAsync(pythonCode);
-  const formatMessage = pyodide.globals.get('format_message');
-
-  function logResource(name) {
-    const msg = formatMessage(name);
-    console.log(msg);
+(function() {
+  //console.log('Content script loaded');
+  
+  // Function to log a resource using Python formatting
+  function logResource(url) {
+    //console.log('here')
+    // Send message to background script to format the message with Python
+    chrome.runtime.sendMessage(
+        { type: 'FORMAT_RESOURCE', url: url },
+        function(result) {
+          if (result && result.success) {
+            console.log(result.response);
+          }}
+     );
   }
 
   // Log already loaded resources
@@ -26,4 +27,6 @@
   });
 
   observer.observe({ entryTypes: ['resource'] });
+  
+  console.log('Resource monitoring started');
 })();

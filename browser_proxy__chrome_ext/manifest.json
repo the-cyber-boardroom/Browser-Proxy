@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "Resource Logger",
+  "name": "Resource Logger with Pyodide",
   "version": "0.1",
-  "description": "Logs resources loaded on docs.diniscruz.ai",
+  "description": "Logs resources loaded on docs.diniscruz.ai using Python via Pyodide",
   "content_scripts": [
     {
       "matches": ["https://docs.diniscruz.ai/*"],
@@ -10,7 +10,22 @@
       "run_at": "document_start"
     }
   ],
+  "background": {
+    "service_worker": "js/background.js"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["python/*", "pyodide/*"],
+      "matches": ["https://docs.diniscruz.ai/*"]
+    }
+  ],
+  "permissions": [
+    "scripting"
+  ],
   "host_permissions": [
-    "https://cdn.jsdelivr.net/*"
-  ]
+    "https://docs.diniscruz.ai/*"
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self'"
+  }
 }
