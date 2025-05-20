@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Resource Logger with Pyodide",
   "version": "0.1",
-  "description": "Logs resources loaded on docs.diniscruz.ai using Python via Pyodide",
+  "description": "Captures content from docs.diniscruz.ai using Python via Pyodide",
   "content_scripts": [
     {
       "matches": ["https://docs.diniscruz.ai/*"],
@@ -20,7 +20,10 @@
     }
   ],
   "permissions": [
-    "scripting"
+    "scripting",
+    "webRequest",
+    "declarativeNetRequestWithHostAccess",
+    "storage"
   ],
   "host_permissions": [
     "https://docs.diniscruz.ai/*"

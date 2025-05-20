@@ -1,5 +1,9 @@
 # Browser-Proxy
 
+NOTE: this approach (in May 2025) didn't work, as documented here https://www.linkedin.com/posts/diniscruz_when-failing-to-make-something-work-is-a-activity-7330536672520007680-6029/  
+
+-----
+
 A proof-of-concept Chrome extension that acts as a website proxy by capturing page content and storing it server side. The extension communicates with a FastAPI backend that saves files to S3.
 
 See [docs/architecture.md](docs/architecture.md) for a detailed overview of the planned architecture. The [docs/diagrams.md](docs/diagrams.md) file contains visual diagrams of the system.
